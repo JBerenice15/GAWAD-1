@@ -36,9 +36,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="contraseña" class="control-label col-md-4 lead">Contraseña:</label>
+                            <label for="contra" class="control-label col-md-4 lead">Contraseña:</label>
                             <div class="col-md-7">
-                                <input type="password" class="form-control" name="contraseña" placeholder="Ingresa tu contraseña">
+                                <input type="password" class="form-control" name="contra" placeholder="Ingresa tu contraseña">
                             </div>
                         </div>
                                                

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class AccionLogin {
     
     private String nombre;
-    private String pass;
+    private String contra;
 
     public String getNombre() {
         return nombre;
@@ -17,17 +17,17 @@ public class AccionLogin {
         this.nombre = nombre;
     }
 
-    public String getPass() {
-        return pass;
+    public String getContra() {
+        return contra;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setContra(String contra) {
+        this.contra = contra;
     }
             
     public String execute() throws PropertyVetoException, SQLException{
         LoginBean lb = new LoginBean();        
-        if(lb.validateUser(getNombre(), getPass())){
+        if(lb.validateUser(nombre,contra)){
             return "Exito";
         }else{
             return "Fracaso";
