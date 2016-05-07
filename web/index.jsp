@@ -2,20 +2,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8">
+        <title>:::Geolitic:::Bienvenido</title>
+        <link type="text/css" rel="stylesheet" href="./css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="./css/estilos.css">
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/jquery-1.12.3.min.js"></script>
     </head>
-    <body>
-        <h1>Geolitic</h1>
-        <p>Un pagina donde podras resolver dudas acerca de geometria analitica</p>
-        <form method="POST" action="LoginAction">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre"/>
+    <body>        
+        <div class="container">            
             <br>
-            <label for="contra">Contraseña:</label>
-            <input type="password" name="pass"/>
             <br>
-            <input type="submit" value="Ingresar"/>
-        </form>
+            <br>
+            <div class="row">
+                <h1 class="col-md-6">Geolitic</h1> 
+                <p class="col-md-6 lead" style="top: 25px;">Una página donde podrás resolver problemas de geometría analítica: Línea Recta, Circunferencia y Parábola.</p>                    
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="container caja">
+                <div class="row">
+                    <p class="text-center col-md-12">Ingresar</p>
+                </div>            
+                <br>
+                <div class="row">
+                    <form action="LoginAction" method="POST" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="nombre" class="control-label col-md-4 lead">Nombre:</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre de usuario">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contraseña" class="control-label col-md-4 lead">Contraseña:</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" name="contraseña" placeholder="Ingresa tu contraseña">
+                            </div>
+                        </div>
+                                               
+                        <div class="form-group">
+                            <a href="Registrate.jsp" class="lead col-md-8" style="top: 25px; left: 10px; text-decoration: underline; color: #000;">No tienes cuenta,Registrate!</a>
+                            <div class="col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Enviar" style="height: 45px; width: 80px; font-size: 23px;"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            <br>
+            <footer>
+                <p class="text-center">@GAWAD::2016 &COPY;Copyright Todos los derechos Reservados<br><a href="acercade.html" style="color: #FFF; text-decoration: underline;">Acerca de la aplicación web</a></p>                                
+            </footer>
+        </div>
     </body>
 </html>

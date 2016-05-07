@@ -1,0 +1,27 @@
+body{        
+    background-image: url(../img/MaquetadoGeolitic.png);
+    color: #FFF;    
+    font-family: "Oswald";
+}
+
+h1{
+    font-family: "Century Gothic";   
+    font-weight:bolder;
+    font-size: 70px;
+}
+
+.caja{
+    background-color: #FFF;
+    color:#000;
+    border: #FFF solid 2px;
+    border-radius: 5px;
+    width: 400px;
+    height: 350px;
+    font-size: 43px;
+}
+
+
+
+
+
+

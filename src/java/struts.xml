@@ -4,7 +4,12 @@
 
 <struts>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">
-        
-    </package>
+    <package name="default" extends="struts-default">        
+    </package>    
+    <package name = "Logininicio" namespace="/" extends="struts-default">
+        <action name="LoginAction" class="com.geolitic.model.AccionLogin">
+            <result name="Exito">/Menu.jsp</result>
+            <result name="Fracaso">/Error.jsp</result>
+        </action>
+    </package>    
 </struts>
