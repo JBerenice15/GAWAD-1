@@ -7,8 +7,11 @@
         <title>:::Geolitic:::Bienvenido</title>
         <link type="text/css" rel="stylesheet" href="./css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="./css/estilos.css">
+        <link type="text/css" rel="stylesheet" href="./css/sweetalert.css">
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/jquery-1.12.3.min.js"></script>
+        <script src="./js/sweetalert.min.js"></script>        
+        <script src="./js/funciones.js"></script>
     </head>
     <body>        
         <div class="container">            
@@ -28,24 +31,24 @@
                 </div>            
                 <br>
                 <div class="row">
-                    <form action="LoginAction" method="POST" class="form-horizontal">
+                    <form action="LoginAction" method="POST" class="form-horizontal" id="Logininicio" name="Logininicio" onsubmit="return validar()">
                         <div class="form-group">
                             <label for="nombre" class="control-label col-md-4 lead">Nombre:</label>
                             <div class="col-md-7">
-                                <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre de usuario">
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu nombre de usuario">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contra" class="control-label col-md-4 lead">Contraseña:</label>
                             <div class="col-md-7">
-                                <input type="password" class="form-control" name="contra" placeholder="Ingresa tu contraseña">
+                                <input type="password" class="form-control" name="contra" id="contra" placeholder="Ingresa tu contraseña">
                             </div>
                         </div>
                                                
                         <div class="form-group">
                             <a href="Registrate.jsp" class="lead col-md-8" style="top: 25px; left: 10px; text-decoration: underline; color: #000;">No tienes cuenta,Registrate!</a>
                             <div class="col-md-3">
-                                <input type="submit" class="btn btn-primary" value="Enviar" style="height: 45px; width: 80px; font-size: 23px;"/>
+                                <input type="submit" class="btn btn-primary" value="Enviar" id="btn_enviar" style="height: 45px; width: 80px; font-size: 23px;"/>
                             </div>
                         </div>
                     </form>
