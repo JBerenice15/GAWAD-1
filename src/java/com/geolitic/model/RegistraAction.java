@@ -1,17 +1,30 @@
 package com.geolitic.model;
 
-import com.geolitic.POJO.LoginBean;
+import com.geolitic.hibernate.HibernateUtil;
+import com.geolitic.hibernate.Usuarios;
+import com.opensymphony.xwork2.ActionSupport;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
-public class RegistraAction {        
+public class RegistraAction extends ActionSupport {        
     
     private String nombre;
     private String appat;
     private String apmat;
     private String sexo;
-    private String edad;
+    private int edad;
     private String username;
-    private String contra;
+    private String pass;
+    private Session hibernateSession;    
 
+    public Session getHibernateSession() {
+        return hibernateSession;
+    }
+
+    public void setHibernateSession(Session hibernateSession) {
+        this.hibernateSession = hibernateSession;
+    }
+  
     public String getNombre() {
         return nombre;
     }
@@ -44,11 +57,11 @@ public class RegistraAction {
         this.sexo = sexo;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
@@ -60,20 +73,34 @@ public class RegistraAction {
         this.username = username;
     }
 
-    public String getContra() {
-        return contra;
+    public String getPass() {
+        return pass;
     }
 
-    public void setContra(String contra) {
-        this.contra = contra;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
     
     
     public String execute() throws Exception {        
-        LoginBean lb = new LoginBean();
-        if(lb.registra(nombre, appat, apmat, sexo, edad, username, contra)){
-            return "ExitoRegistro";
-        }else return "Fallo";
+      
+       hibernateSession=HibernateUtil.getSessionFactory().openSession(); 
+       if(hibernateSession != null){
+      //Insert
+        Transaction t0=hibernateSession.beginTransaction();
+        Usuarios user0 = new Usuarios();        
+        user0.setNombre(nombre);
+        user0.setApPat(appat);
+        user0.setApMat(apmat);
+        user0.setSexo(sexo);
+        user0.setEdad(edad);
+        user0.setUserName(username);
+        user0.setPass(pass);
+        hibernateSession.save(user0);
+        t0.commit();
+        return "ExitoRegistro";    
+       }else{
+           return "Fallo";
+       }
     }
-    
 }

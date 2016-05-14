@@ -31,7 +31,7 @@
                 </div>            
                 <br>
                 <div class="row">
-                    <form action="RegistraAction" method="POST" class="form-horizontal" id="RegistraLogin" name="RegistraLogin" role="form" onsubmit="return validar()">
+                    <form action="RegistraAction" method="POST" class="form-horizontal" id="RegistraLogin" name="RegistraLogin" role="form" onsubmit="return registro();">
                         <div class="form-group row">
                             <label for="nombre" class="control-label col-md-4 lead">* Nombre:</label>
                             <div class="col-md-7">
@@ -53,8 +53,8 @@
                         <div class="form-group row">
                             <label for="sexo" class="control-label col-md-4 lead"style="top:10px;">* Sexo:</label>
                             <div class="col-md-5">
-                                <label class="radio-inline lead" style="left:-20px;top:-10px;">M:<input type="radio" name="sexo" value="M" style="left:70px; top:10px;"></label>
-                                <label class="radio-inline lead" style="left:-20px;top:-10px;">F:<input type="radio" name="sexo"value="F" style="left:60px; top:10px;"></label>
+                                <label class="radio-inline lead" style="left:-20px;top:-10px;">M:<input type="radio" id="sexo" name="sexo" value="M" style="left:70px; top:10px;"></label>
+                                <label class="radio-inline lead" style="left:-20px;top:-10px;">F:<input type="radio" id="sexo" name="sexo"value="F" style="left:60px; top:10px;"></label>
                             </div>                            
                         </div>
                         <div class="form-group row">
@@ -70,15 +70,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="contra" class="control-label col-md-4 lead">* Contraseña:</label>
+                            <label for="pass" class="control-label col-md-4 lead">* Contraseña:</label>
                             <div class="col-md-7">
-                                <input type="password" class="form-control" name="contra" id="contra" placeholder="Ingresa tu contraseña">
+                                <input type="password" class="form-control" name="pass" id="contra" placeholder="Ingresa tu contraseña">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="repcontra" class="control-label col-md-4 lead">* Repite contraseña:</label>
                             <div class="col-md-7">
-                                <input type="password" class="form-control" name="repcontra" id="repcontra" placeholder="Ingresa tu contraseña">
+                                <input type="password" class="form-control" name="repcontra" id="repcontra" placeholder="Confirma tu contraseña">
                             </div>
                         </div>
                         <div class="form-group-sm">                            

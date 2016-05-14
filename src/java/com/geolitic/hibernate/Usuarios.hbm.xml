@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/05/2016 10:42:50 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.geolitic.hibernate.Usuarios" table="Usuarios" catalog="BaseGeolitic" optimistic-lock="version">
+        <id name="iduser" type="java.lang.Integer">
+            <column name="iduser" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="50" not-null="true" />
+        </property>
+        <property name="apPat" type="string">
+            <column name="ApPat" length="50" not-null="true" />
+        </property>
+        <property name="apMat" type="string">
+            <column name="ApMat" length="50" not-null="true" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="Sexo" length="1" not-null="true" />
+        </property>
+        <property name="edad" type="int">
+            <column name="Edad" not-null="true" />
+        </property>
+        <property name="userName" type="string">
+            <column name="UserName" length="30" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="Pass" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
