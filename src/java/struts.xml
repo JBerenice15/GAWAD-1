@@ -12,4 +12,10 @@
             <result name="Fracaso">/Error.jsp</result>
         </action>
     </package>    
+    <package name = "RegistroLogin" namespace="/" extends="struts-default">
+        <action name="RegistraAction" class="com.geolitic.model.RegistraAction">
+            <result name="ExitoRegistro">/Exito.jsp</result>            
+            <result name="Fallo">/Fallo.jsp</result>            
+        </action>
+    </package>    
 </struts>

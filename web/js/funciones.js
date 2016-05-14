@@ -18,4 +18,8 @@ function validar(){
     return true;
 }
 
+function limpiar(){
+   document.getElementById("RegistraLogin").reset();          
+}
+
 
